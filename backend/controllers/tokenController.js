@@ -1,5 +1,7 @@
 const Token = require('../models/Token');
 const Clinic = require('../models/Clinics');
+const sendSMS = require('../utils/sendSMS'); 
+const User = require('../models/User'); 
 // const moment = require('moment'); // Optional: for date comparison
 
 
@@ -76,17 +78,34 @@ exports.getTodayTokensForClinic = async (req, res) => {
 
 exports.callToken = async (req, res) => {
   try {
-    const token = await Token.findById(req.params.id);
+    const token = await Token.findById(req.params.id).populate('patientId');
+
     if (!token || token.status !== 'waiting') {
       return res.status(400).json({ message: 'Invalid token or already called' });
     }
 
+    // Update token status
     token.status = 'called';
     token.calledAt = new Date();
     await token.save();
 
-    res.status(200).json({ message: 'Token called', token });
+    // Compose SMS
+    const message = `Hello ${token.patientId.name}, your token number ${token.tokenNumber} is now being called. Please head to the clinic.`;
+
+    // Send SMS to patient's phone number
+    await sendSMS(token.patientId.phone, message);
+
+    // (Optional) Save to Notification collection
+    await Notification.create({
+      userId: token.patientId._id,
+      message,
+      sentAt: new Date(),
+      type: 'sms'
+    });
+
+    res.status(200).json({ message: 'Token called and SMS sent', token });
   } catch (err) {
+    console.error(err);
     res.status(500).json({ message: 'Error calling token' });
   }
 };
