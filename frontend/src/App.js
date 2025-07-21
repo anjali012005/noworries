@@ -3,6 +3,7 @@ import Home from "./Pages/HomePage";
 import Navbar from "./Pages/Navbar/Navbars";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Footer from "./Pages/Footer/Footer";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
