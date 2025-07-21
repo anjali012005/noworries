@@ -7,7 +7,7 @@ import { FaTelegram } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <div className='footer'>
+        <div id="link" className='footer'>
             <div className='footer-heading'><h4>Connect With Us.</h4></div>
             
             <div className='footer-icons'>
