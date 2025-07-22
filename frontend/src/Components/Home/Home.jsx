@@ -2,8 +2,10 @@ import './Home.css';
 import img from '../../public/backlogo.jpg';
 import doc from '../../public/doc.jpg'
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div id="home" className='home'>
       <div className='home-quote'>
@@ -17,7 +19,7 @@ const Home = () => {
           <div className='doc-img-div'><img src={doc} className='doc-img' alt='doc-img' />
           </div>
 
-          <div className="doc-btn" ><Button variant="outline-primary">Book</Button>
+          <div className="doc-btn" ><Button onClick={() => navigate('/book')} variant="outline-primary">Book</Button>
           </div>
 
         </div>
