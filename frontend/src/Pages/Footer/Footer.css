@@ -1,6 +1,7 @@
 .footer{
-    height: 28vh;
-    background-color:#F9F9F9;
+     background-color: #F9F9F9;
+    padding: 20px 0;
+    margin-top: auto;
 }
 .footer-heading{
     display:flex;

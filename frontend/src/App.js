@@ -6,18 +6,23 @@ import './App.css';
 import Footer from "./Pages/Footer/Footer";
 import BookDoctor from "./Components/BookDoctor/BookDoctor";
 
-
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/book" element={<BookDoctor/>} />
-      </Routes>
-      <Footer/>
-    </Router>
+    <div className="app-wrapper">
+      <Router>
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/book" element={<BookDoctor />} />
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
+    </div>
   );
 }
+
+// export default App;
 
 export default App;

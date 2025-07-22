@@ -1,5 +1,14 @@
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 *{
-    margin: 0;
-    padding: 0;
     font-family: 'poppins' sans-serif;
+}
+
+.content {
+    flex: 1; 
+    /* //takes all space between nav and footer */
 }
