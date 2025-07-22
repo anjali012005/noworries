@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Footer from "./Pages/Footer/Footer";
 import BookDoctor from "./Components/BookDoctor/BookDoctor";
+import PatientQueue from "./Components/PatientQueue/PatientQueue";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/book" element={<BookDoctor />} />
+            <Route path="/queue" element={<PatientQueue/>} />
           </Routes>
         </div>
         <Footer />
