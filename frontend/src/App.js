@@ -6,6 +6,7 @@ import './App.css';
 import Footer from "./Pages/Footer/Footer";
 import BookDoctor from "./Components/BookDoctor/BookDoctor";
 import PatientQueue from "./Components/PatientQueue/PatientQueue";
+import MyProfile from "./Components/MyProfile/MyProfile";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/book" element={<BookDoctor />} />
             <Route path="/queue" element={<PatientQueue/>} />
+            <Route path="my-profile" element={<MyProfile/>} />
           </Routes>
         </div>
         <Footer />
