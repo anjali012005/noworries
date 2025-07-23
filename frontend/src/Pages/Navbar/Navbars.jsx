@@ -9,7 +9,7 @@ const Navbars = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container className='nav-container'>
-        <div className='nav-name'><Navbar.Brand href="#home" style={{color: "#00b4d8",  fontWeight: 800}}>noWorries</Navbar.Brand></div>
+        <div className='nav-name'><Navbar.Brand href="/" style={{color: "#00b4d8",  fontWeight: 800}}>noWorries</Navbar.Brand></div>
         <div>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

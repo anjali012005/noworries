@@ -1,0 +1,107 @@
+.myprofile-container{
+    display:flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+.user-img-container{
+    width:35%;
+    background-color:red;
+    padding:50px;
+}
+.user-info-container{
+    width:65%;
+    background-color:pink;
+    padding:50px;
+}
+.my-profile-img{
+    height:400px;
+    width:400px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  text-align: center;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00aaff;
+  margin-bottom: 1rem;
+}
+
+.profile-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.role {
+  color: #777;
+  font-size: 0.95rem;
+}
+
+.profile-body {
+  margin-top: 1.5rem;
+}
+
+.profile-section {
+  margin-bottom: 1.5rem;
+}
+
+.profile-section h4 {
+  margin-bottom: 0.5rem;
+  color: #00aaff;
+  font-size: 1rem;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.edit {
+  background-color: #ffaa00;
+  color: white;
+}
+
+.btn.book {
+  background-color: #00aaff;
+  color: white;
+}
