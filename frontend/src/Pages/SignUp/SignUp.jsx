@@ -26,6 +26,7 @@ const SignUp = () => {
                 <input placeholder='Enter Your Mobile Number' />
 
                 <button className='signup-button'>Submit</button>
+                <p>Already have an account? <a href="/login">Login</a></p>
             </form>
         </div>
     )
