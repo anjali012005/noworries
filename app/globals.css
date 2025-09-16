@@ -1,3 +1,12 @@
+input:focus,
+input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
